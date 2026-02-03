@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+<style>
+    h1,
+    h2
+     {
+        text-align: center;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+
+      h1 {
+        color: #1a64d6;
+        font-size: 34px;
+        line-height: 48px;
+        margin: 0;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 28px;
+        line-height: 36px;
+        font-weight: 400;
+      }
+
+      p {
+        displaly: block;
+        display: block;
+        font-size: 18px;
+        opacity: 0.7;
+        text-align: center;
+        font-family: monospace;
+      }
+      img {
+        display: block;
+        margin: 20px auto;
+        border: 2px solid #1a64d6;
+        border-radius: 10px;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        border: 1px solid #1a64d6;
+        background: #1a64d6;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 200ms all ease-in-out;
+      }
+
+      button:hover {
+        background: #155ab6;
+      }
+
+      a {
+        display: block;
+        text-align: center;
+        margin-top: 15px;
+        font-size: 16px;
+        color: #1a64d6;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+</style>
+</head>
+<body>
+    <h1>Sudoku</h1>
+    <h2>Play a game of Sudoku</h2>
+    <hr/> 
+    <p>Sudoku is a logic-based, combinatorial number-placement puzzle. The objective is to fill a 9×9 grid with digits so that each column, each row, and each of the nine 3×3 subgrids that compose the grid contain all of the digits from 1 to 9.<br/>The puzzle setter provides a partially completed grid, which, for a well-posed puzzle, has a single solution.</p>
+    <hr/>
+       <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/088/original/Sudoku_Puzzle_by_L2G-20050714_standardized_layout.svg.png?1767519508",alt="Sudoku Puzzle"width="300" height="300">
+
+
+    <button>SignUp</button>
+    <a href="https://sudoku.com/">Click here to play Sudoku online</a>
+    <script>
+      function SignUp() {
+        let firstname = prompt("Enter your first name:");
+        let interest= prompt("Are you interested in playing Sudoku? (yes/no)");
+        if (interest.toLowerCase() === "yes") {
+          alert("Thank you, " + firstname + "! You have successfully signed up to play Sudoku.");
+        } else {
+          alert("No worries, " + firstname + "! Feel free to explore Sudoku whenever you like.");
+        }
+      }
+    let SignUpButton = document.querySelector("button");
+    SignUpButton.addEventListener("click", SignUp);
+    </script>
+</body>
+</html>
